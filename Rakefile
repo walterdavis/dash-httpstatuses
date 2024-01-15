@@ -6,9 +6,9 @@ namespace :doc do
   end
 
   task :download do
-    sh "wget -m -p -c -k --user-agent= -e robots=off --wait 1 -E -np http://httpstatus.es/"
+    sh "wget -m -p -c -k --user-agent= -e robots=off --wait 1 -E -np https://httpstatuses.io/"
     mkdir_p docset("Contents/Resources")
-    mv "httpstatus.es", docset("Contents/Resources/Documents")
+    mv "httpstatuses.io", docset("Contents/Resources/Documents")
     cp "icon.png", docset
     cp "Info.plist", docset("Contents")
   end
